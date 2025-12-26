@@ -1,43 +1,18 @@
 <script setup>
+import {
+  TibetanMantraToIastAndPhonetics,
+  testGroups as importedTestGroups,
+} from "tibetan-mantra-to-iast-and-phonetics/tests";
 import { computed, onMounted, ref } from "vue";
-import TibetanMantraToIastAndPhonetics from "../lib/tibetan-mantra-to-iast-and-phonetics.js";
 
 const testGroups = ref([]);
 const loading = ref(true);
 
 onMounted(async () => {
-  testGroups.value = [
-    {
-      name: "All mantras from Mipham Rinpoché's Le Drip Gyü Chö - Sanskrit transliteration",
-      sentences: true,
-      phonetics: false,
-      tests: [
-        { tibetan: "ཨོཾ་ཨཱཿཧཱུྃ།", result: "oṁ āḥ hūṁ" },
-        { tibetan: "ཨོཾ་ཨཱཿཧཱུྃ་སྭཱ་ཧཱ།", result: "oṁ āḥ hūṁ svāhā" },
-        { tibetan: "ཨོཾ་ཧཱུྃ་ཏྲཱཾ་ཧྲཱིཿཨཱཿ", result: "oṁ hūṁ trāṁ hrīḥ āḥ" },
-        { tibetan: "འཿཨཿཧཿཤཿསཿམཿ", result: "āḥ aḥ haḥ śaḥ saḥ maḥ" },
-        { tibetan: "ཨོཾ་བཛྲ་སཏྭ་ཧཱུྃ།", result: "oṁ vajra satva hūṁ" },
-        {
-          tibetan: "ན་མཿས་མནྟ་བུདྡྷཱ་ནཱཾ། ཨཱ་བཱི་ར་ཧཱུྃ་ཁཾ།",
-          result: "namaḥ samanta buddhānāṁ    āvīra hūṁ khaṁ",
-        },
-        { tibetan: "ཨོཾ་མ་ཎི་པདྨེ་ཧཱུྃ།", result: "oṁ maṇi padmé hūṁ" },
-        {
-          tibetan: "ཨོཾ་ཏཱ་རེ་ཏུཏྟཱ་རེ་ཏུ་རེ་སྭཱ་ཧཱ།",
-          result: "oṁ tāré tuttāré turé svāhā",
-        },
-      ],
-    },
-    {
-      name: "Phonetics tests",
-      sentences: true,
-      phonetics: true,
-      tests: [
-        { tibetan: "ཨོཾ་ཨ་ར་པ་ཙ་ན", result: "om a ra pa cha na" },
-        { tibetan: "བཛྲ་པཱ་ཙ་ཧོ", result: "vajra pacha ho" },
-      ],
-    },
-  ];
+  testGroups.value = importedTestGroups.map((group) => ({
+    ...group,
+    tests: group.tests.map((test) => ({ ...test })),
+  }));
 
   testGroups.value.forEach((group) => {
     group.tests.forEach((test) => {

@@ -1,11 +1,11 @@
 <script setup>
 import TibetanUnicodeConverter from "tibetan-ansi-to-unicode";
+import { TibetanMantraToIastAndPhonetics } from "tibetan-mantra-to-iast-and-phonetics";
 import { computed, ref, watch } from "vue";
 import ClipboardButton from "../components/ClipboardButton.vue";
 import RadioButtons from "../components/RadioButtons.vue";
 import SliderCheckbox from "../components/SliderCheckbox.vue";
 import Storage from "../lib/storage.js";
-import TibetanMantraToIastAndPhonetics from "../lib/tibetan-mantra-to-iast-and-phonetics.js";
 
 const defaultText = `ཨོཾ་ཨཱཿཧཱུྃ།
 ཨོཾ་ཨཱཿཧཱུྃ་སྭཱ་ཧཱ།

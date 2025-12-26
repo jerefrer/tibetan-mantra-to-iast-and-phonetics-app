@@ -14,9 +14,9 @@ importers:
       tibetan-ansi-to-unicode:
         specifier: ^1.1.0
         version: 1.1.0
-      tibetan-normalizer:
-        specifier: ^0.2.0
-        version: 0.2.0
+      tibetan-mantra-to-iast-and-phonetics:
+        specifier: ^0.1.0
+        version: 0.1.0
       vue:
         specifier: ^3.4.0
         version: 3.5.26
@@ -696,6 +696,9 @@ packages:
   tibetan-ansi-to-unicode@1.1.0:
     resolution: {integrity: sha512-4j9/2FjsAXVRZvh2Mp0EtVw0Sz4HDxa3f6Os37eiRIZt90w8+Jrgv1vtCSEM2WozQDSXD6WHTgfJAK+UhQCJMA==}
 
+  tibetan-mantra-to-iast-and-phonetics@0.1.0:
+    resolution: {integrity: sha512-rMmQhMSoyAcC+gfVAscYv5kJ6HedkiDPZ3gE46GrzBIHXC6MRA7kd1aiNmD3gJ9RjwqUCvfF53yboKYRAsfCkQ==}
+
   tibetan-normalizer@0.2.0:
     resolution: {integrity: sha512-KvqCBvscbxIcI+/2Q2GpUT4ZaRqYYaXwp+cjmdn3TkNIMr/GtLI5Avpfw9WIa0UZlURj2CNv6n2x+WR1auaUqQ==}
 
@@ -1338,6 +1341,10 @@ snapshots:
       any-promise: 1.3.0
 
   tibetan-ansi-to-unicode@1.1.0: {}
+
+  tibetan-mantra-to-iast-and-phonetics@0.1.0:
+    dependencies:
+      tibetan-normalizer: 0.2.0
 
   tibetan-normalizer@0.2.0: {}
 

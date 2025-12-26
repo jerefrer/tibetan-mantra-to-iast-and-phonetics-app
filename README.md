@@ -1,9 +1,36 @@
-# tibetan-mantra-to-iast-and-phonetics
+# Tibetan Mantra to IAST and Phonetics - Web App
 
-A naive attempt at converting the mantras from Unicode Tibetan into
-IAST (International Alphabet of Sanskrit Transliteration) and phonetics.
+A Vue.js web application for converting Tibetan mantras to IAST (International Alphabet of Sanskrit Transliteration) and phonetics.
+
+This app uses the `tibetan-mantra-to-iast-and-phonetics` library, accessible here
 
 ![1766753098762](image/README/1766753098762.png)
+
+## Setup
+
+1. Install dependencies:
+
+```bash
+pnpm install
+```
+
+2. Run the development server:
+
+```bash
+pnpm dev
+```
+
+3. Build for production:
+
+```bash
+pnpm build
+```
+
+## Features
+
+- **Convert**: Transliterate Tibetan text to IAST or phonetics
+- **Compare**: Compare existing transliterations with generated ones
+- **Tests**: View and run transliteration tests from the engine package
 
 ## TODO
 

@@ -1,7 +1,7 @@
 <script setup>
 import * as Diff from "diff";
+import { TibetanMantraToIastAndPhonetics } from "tibetan-mantra-to-iast-and-phonetics";
 import { computed, ref } from "vue";
-import TibetanMantraToIastAndPhonetics from "../lib/tibetan-mantra-to-iast-and-phonetics.js";
 
 const defaultTibetan = `ཨོཾ་ཨཱཿཧཱུྃ།
 ཨོཾ་ཨཱཿཧཱུྃ་སྭཱ་ཧཱ།
