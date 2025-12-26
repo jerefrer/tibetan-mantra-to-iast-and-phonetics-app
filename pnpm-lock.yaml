@@ -15,8 +15,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       tibetan-mantra-to-iast-and-phonetics:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       vue:
         specifier: ^3.4.0
         version: 3.5.26
@@ -696,8 +696,8 @@ packages:
   tibetan-ansi-to-unicode@1.1.0:
     resolution: {integrity: sha512-4j9/2FjsAXVRZvh2Mp0EtVw0Sz4HDxa3f6Os37eiRIZt90w8+Jrgv1vtCSEM2WozQDSXD6WHTgfJAK+UhQCJMA==}
 
-  tibetan-mantra-to-iast-and-phonetics@0.1.1:
-    resolution: {integrity: sha512-hFQnN0GpxBlVEHTMJoFVOLt3Y1soZljrgG3E8G+KLz23Hq/as3X7dy6V8xe7gY83Knn7FC6sHMGdgqiFuJGMQQ==}
+  tibetan-mantra-to-iast-and-phonetics@0.1.2:
+    resolution: {integrity: sha512-3LiZHn1JYIo6z6/v/VEQdzFdwh4//AnXlB18zy7fvxCg9acmmEE5kXBofgWqEhGL3WuWe05I2W1SRTJo7BjEDw==}
 
   tibetan-normalizer@0.2.0:
     resolution: {integrity: sha512-KvqCBvscbxIcI+/2Q2GpUT4ZaRqYYaXwp+cjmdn3TkNIMr/GtLI5Avpfw9WIa0UZlURj2CNv6n2x+WR1auaUqQ==}
@@ -1342,7 +1342,7 @@ snapshots:
 
   tibetan-ansi-to-unicode@1.1.0: {}
 
-  tibetan-mantra-to-iast-and-phonetics@0.1.1:
+  tibetan-mantra-to-iast-and-phonetics@0.1.2:
     dependencies:
       tibetan-normalizer: 0.2.0
 
