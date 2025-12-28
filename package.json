@@ -1,7 +1,7 @@
 {
   "name": "tibetan-mantra-to-iast-and-phonetics-app",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,7 @@
   "dependencies": {
     "diff": "^8.0.2",
     "tibetan-ansi-to-unicode": "^1.1.0",
-    "tibetan-mantra-to-iast-and-phonetics": "^0.1.5",
+    "tibetan-mantra-to-iast-and-phonetics": "^0.1.6",
     "vue": "^3.4.0",
     "vue-router": "^4.6.4"
   },

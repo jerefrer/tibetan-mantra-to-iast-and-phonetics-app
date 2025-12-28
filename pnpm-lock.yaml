@@ -15,8 +15,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       tibetan-mantra-to-iast-and-phonetics:
-        specifier: ^0.1.5
-        version: 0.1.5
+        specifier: ^0.1.6
+        version: 0.1.6
       vue:
         specifier: ^3.4.0
         version: 3.5.26
@@ -696,14 +696,14 @@ packages:
   tibetan-ansi-to-unicode@1.1.0:
     resolution: {integrity: sha512-4j9/2FjsAXVRZvh2Mp0EtVw0Sz4HDxa3f6Os37eiRIZt90w8+Jrgv1vtCSEM2WozQDSXD6WHTgfJAK+UhQCJMA==}
 
-  tibetan-mantra-to-iast-and-phonetics@0.1.5:
-    resolution: {integrity: sha512-baARI7pc9e2csILFLVariVAZJWkdljIuLC+vvuEMeKnm0+KKa/+bI5XWXclIr3bJ3IK+UjqhxUWaXAG4Z+yISg==}
+  tibetan-mantra-to-iast-and-phonetics@0.1.6:
+    resolution: {integrity: sha512-CdQmIGtWfuaFZJo+yNj7dggeWcYVOFkvncwgnV6wuHIujiweQj7L2gGK8Zkhq/7fkyw6FB3CNgTXZHc/o+FhTA==}
 
   tibetan-normalizer@0.2.0:
     resolution: {integrity: sha512-KvqCBvscbxIcI+/2Q2GpUT4ZaRqYYaXwp+cjmdn3TkNIMr/GtLI5Avpfw9WIa0UZlURj2CNv6n2x+WR1auaUqQ==}
 
-  tibetan-sanskrit-transliteration-data@0.1.2:
-    resolution: {integrity: sha512-6rrG4DxgIU7fPdV+r+NFLCpePxKgYXmMNGpP0sARj/3Nbh02maOfD6skMkGrb30A2iV+SL/XfCceSMJE4x/7nA==}
+  tibetan-sanskrit-transliteration-data@0.1.3:
+    resolution: {integrity: sha512-X70oqsQF54QAiBGYiDj4QytY8DY6w2Escp1ewtbUJKDUn/wYSTEjmriBqwognvxQSVvpgGgLW/K256m16ixzCA==}
 
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
@@ -1345,14 +1345,14 @@ snapshots:
 
   tibetan-ansi-to-unicode@1.1.0: {}
 
-  tibetan-mantra-to-iast-and-phonetics@0.1.5:
+  tibetan-mantra-to-iast-and-phonetics@0.1.6:
     dependencies:
       tibetan-normalizer: 0.2.0
-      tibetan-sanskrit-transliteration-data: 0.1.2
+      tibetan-sanskrit-transliteration-data: 0.1.3
 
   tibetan-normalizer@0.2.0: {}
 
-  tibetan-sanskrit-transliteration-data@0.1.2: {}
+  tibetan-sanskrit-transliteration-data@0.1.3: {}
 
   tinyglobby@0.2.15:
     dependencies:
