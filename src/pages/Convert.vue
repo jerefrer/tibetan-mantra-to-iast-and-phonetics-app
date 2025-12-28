@@ -14,12 +14,16 @@ const defaultText = `ཨོཾ་ཨཱཿཧཱུྃ།
 ཨོཾ་བཛྲ་སཏྭ་ཧཱུྃ།
 ན་མཿས་མནྟ་བུདྡྷཱ་ནཱཾ། ཨཱ་བཱི་ར་ཧཱུྃ་ཁཾ།`;
 
-const options = ref(
-  Storage.get("options") || {
-    capitalize: false,
-    phonetics: false,
-  }
-);
+const defaultOptions = {
+  capitalize: false,
+  phonetics: false,
+  anusvaraStyle: "ṃ",
+};
+
+const options = ref({
+  ...defaultOptions,
+  ...Storage.get("options"),
+});
 
 const text = ref(Storage.get("text") || defaultText);
 
@@ -67,6 +71,7 @@ const convertedLines = computed(() => {
   const opts = {
     mode: options.value.phonetics ? "phonetics" : "iast",
     capitalize: options.value.capitalize,
+    anusvaraStyle: options.value.anusvaraStyle,
   };
   return lines.value
     .map((line) =>
@@ -91,17 +96,41 @@ const transliterationChoices = [
   { value: false, text: "Sanskrit" },
   { value: true, text: "Phonetics" },
 ];
+
+const anusvaraChoices = [
+  { value: "ṃ", text: "ṃ" },
+  { value: "ṁ", text: "ṁ" },
+];
 </script>
 
 <template>
   <div>
     <!-- Controls -->
-    <div class="flex flex-wrap gap-4 justify-between items-center mb-6">
-      <RadioButtons
-        :modelValue="options.phonetics"
-        @update:modelValue="options.phonetics = $event"
-        :choices="transliterationChoices"
-      />
+    <div class="flex flex-wrap gap-6 justify-between items-center mb-6">
+      <div class="flex flex-wrap gap-6 items-center">
+        <div class="flex items-center gap-2">
+          <span
+            class="text-xs font-medium tracking-wide uppercase text-slate-500 dark:text-slate-400"
+            >Output</span
+          >
+          <RadioButtons
+            :modelValue="options.phonetics"
+            @update:modelValue="options.phonetics = $event"
+            :choices="transliterationChoices"
+          />
+        </div>
+        <div v-if="!options.phonetics" class="flex items-center gap-2">
+          <span
+            class="text-xs font-medium tracking-wide uppercase text-slate-500 dark:text-slate-400"
+            >Anusvara</span
+          >
+          <RadioButtons
+            :modelValue="options.anusvaraStyle"
+            @update:modelValue="options.anusvaraStyle = $event"
+            :choices="anusvaraChoices"
+          />
+        </div>
+      </div>
       <SliderCheckbox
         v-model="options.capitalize"
         text="Capitalize each group"
